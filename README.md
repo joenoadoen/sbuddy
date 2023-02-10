@@ -1,6 +1,16 @@
 
 # Studybuddy
 
+
+## Agenda
+
+1. [Projektbeschreibung](#projektbeschreibung)
+2. [Features](#features)
+3. [Installation](#installation)
+4. [Infos & Zugangsdaten](#infos--zugangsdaten)
+5. [Screenshots](#screenshots)
+
+
 ## Projektbeschreibung:
 
 Studybuddy ist Rahmen des Moduls "Entwicklung mobiler Applikationen (WS22/23)" entstanden. Es handelt sich um eine voll funktionstüchtige Ionic/Angular App, inklusive serverseitigem Backend (-> PHP-API und MySQL-Datenbank).
@@ -156,29 +166,32 @@ Hiermit teile ich den Zugang zur Datenbank (-> phpMyAdmin).
 Sollten weitere Daten benötigt werden oder Rückfragen entstehen, bin ich per Email erreichbar: jonsim01@t-online.de
 
 Die letzten Systemtests erfolgten am 10.02.23 um 15:30 Uhr und es hat alles problemlos funktioniert.
+
+
 ## Screenshots
 
-#### Home-Page
+
+### Home-Page
 
 ![Home-Page](http://wordpress.joenoadoen.de/wp-content/uploads/2023/02/Screenshot-102.png)
 
 
-#### Matches-Page
+### Matches-Page
 
 ![Matches-Page](http://wordpress.joenoadoen.de/wp-content/uploads/2023/02/Screenshot-103.png)
 
 
-#### Settings-Page
+### Settings-Page
 
 ![Settings-Page](http://wordpress.joenoadoen.de/wp-content/uploads/2023/02/Screenshot-104.png)
 
 
-#### Login-Page
+### Login-Page
 
 ![Login-Page](http://wordpress.joenoadoen.de/wp-content/uploads/2023/02/Screenshot-105.png)
 
 
-#### Register-Page
+### Register-Page
 
 ![Register-Page](http://wordpress.joenoadoen.de/wp-content/uploads/2023/02/Screenshot-107.png)
 
