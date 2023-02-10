@@ -120,10 +120,9 @@ Diese untergliedert sich in 7 verschiedene PHP-Skripte, mit unterschiedlichen Fu
 
 ## Installation
 
-Laden Sie das Projekt in eine Umgebung ihrer Wahl, z.B. Visual Studio Code, navigieren Sie in das richtige Verzeichnis per Terminal und starten dort anschließend die Applikation
+Laden Sie das Projekt in eine Umgebung ihrer Wahl, z.B. Visual Studio Code, navigieren Sie in das richtige Verzeichnis per Terminal und starten dort anschließend die Applikation mit:
 
 ```bash
-  cd .\studybuddy
   ionic serve
 ```
     
