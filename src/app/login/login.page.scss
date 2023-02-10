@@ -1,0 +1,43 @@
+.logo {
+    width: 80%;
+    margin: 10% auto;
+}
+
+.logocontainer {
+    margin-top: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginbtn, .registerbtn {
+    width: 50%;
+}
+
+.button-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 16px;
+}
+
+.loginlist {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.loginitem {
+ --inner-padding-end: 2px;
+ --inner-padding-start: 2px;
+ --padding-start: 0px;
+}
+
+.passwordtext {
+    padding-left: 6px !important;
+}
+
+.loginnote {
+    padding-left: 2px;
+}

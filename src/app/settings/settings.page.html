@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="headerset">Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card class="search-settings">
+    <ion-card-header>
+      <ion-card-title>Search Settings</ion-card-title>
+      <ion-card-subtitle>You are currently looking for:</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content class="thecontent">
+      <ion-item class="gendersetting">
+        <ion-label class="genderlabel">Gender</ion-label>
+        <ion-select [(ngModel)]="s_service.settings_gender" (ionChange)="s_service.updateStorageVar('gender')" [multiple]="true" class="genderselect">
+          <ion-select-option value="male">male</ion-select-option>
+          <ion-select-option value="female">female</ion-select-option>
+          <ion-select-option value="diverse">diverse</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Age</ion-label>
+        <ion-range [pin]="true" [dualKnobs]="true" [(ngModel)]="s_service.settings_age" (ionChange)="s_service.updateStorageVar('age')"></ion-range>
+      </ion-item>
+      <ion-item class="gradesegment" lines="full">
+        <ion-label class="grade-label" position="fixed">Grade</ion-label>
+        <ion-segment class="segment" [(ngModel)]="s_service.settings_grade" (ionChange)="s_service.updateStorageVar('grade')">
+          <ion-segment-button class="segmentbtn" value="tutor">
+            <ion-label>tutor</ion-label>
+          </ion-segment-button>
+          <ion-segment-button class="segmentbtn" value="student">
+            <ion-label>student</ion-label>
+          </ion-segment-button>
+          <ion-segment-button class="segmentbtn" value="both">
+            <ion-label>both</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+      </ion-item>
+      <ion-item class="subjectitem">
+        <ion-label class="subjectlabel">Subjects</ion-label>
+        <ion-select [multiple]="true" [(ngModel)]="s_service.settings_subjects" (ionChange)="s_service.updateStorageVar('subjects')" class="subjectselect">
+          <ion-select-option value="Physics">Physics</ion-select-option>
+          <ion-select-option value="Math">Math</ion-select-option>
+          <ion-select-option value="Informatics">Informatics</ion-select-option>
+          <ion-select-option value="Chemistry">Chemistry</ion-select-option>
+          <ion-select-option value="German">German</ion-select-option>
+          <ion-select-option value="Chinese">Chinese</ion-select-option>
+          <ion-select-option value="French">French</ion-select-option>
+          <ion-select-option value="Spanish">Spanish</ion-select-option>
+          <ion-select-option value="English">English</ion-select-option>
+          <ion-select-option value="History">History</ion-select-option>
+          <ion-select-option value="Philosophy">Philosophy</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-button class="logoutbtn" (click)="logout()">Logout</ion-button>
+</ion-content>

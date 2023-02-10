@@ -24,3 +24,145 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+[aria-checked="true"].sc-ion-alert-md .alert-checkbox-icon.sc-ion-alert-md {
+    background-color: #f1ba32;
+    border-color: #f1ba32;
+}
+
+.alert-button.sc-ion-alert-md {
+    color: #f1ba32;
+}
+
+.alert-wrapper {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.item-interactive.ion-valid {
+    --highlight-color-valid: #f1ba32; 
+}
+
+ion-range {
+    --bar-background: #fff7d7;
+    --bar-background-active: #f1ba32;
+    --knob-background: #f1ba32;
+    --pin-background: #f1ba32;
+    --pin-color: #fff;
+}
+
+ion-segment-button {
+    --color-checked: #f1ba32;
+}
+
+ion-button {
+    --background: #f1ba32;
+}
+
+
+ion-card-content:not(.introduction-text) {
+    border-radius: 4%;
+    overflow: hidden;
+  }
+
+.card-content-md:not(.introduction-text) {
+    padding: 0;
+    margin-bottom: 13px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+.segmentbtn {
+    min-width: 30px;
+  }
+
+.subjectitem {
+    overflow-x: auto;
+}
+
+.gendersetting {
+    --inner-padding-end: 0;
+    max-width: 100%;
+}
+
+.genderlabel {
+    flex: none;
+}
+
+.genderselect {
+    position: absolute;
+    right: 16px;
+    max-width: 170px;
+}
+
+.subjectselect {
+    position: absolute;
+    right: 16px;
+    max-width: 170px;
+}
+
+.subjectlabel {
+    flex: none;
+}
+
+.refreshreminder {
+    z-index: 0 !important;
+}
+
+.cardcontainer {
+    z-index: 1;
+}
+
+.matchlist > ion-item {
+    padding-right: 16px;
+}
+
+* {
+    font-family: 'Quicksand', sans-serif !important;
+}
+
+:root {
+    --ion-color-secondary: #f1ba32;
+    --ion-color-secondary-rgb: 241,186,50
+    --ion-color-secondary-contrast: #ffffff;
+    --ion-color-secondary-contrast-rgb: 255, 255, 255;
+    --ion-color-secondary-shade: #c19831;
+    --ion-color-secondary-tint: #fff7d7;
+    --ion-color-primary: #f1ba32;
+    --ion-color-primary-rgb: 241,186,50
+    --ion-color-primary-contrast: #ffffff;
+    --ion-color-primary-contrast-rgb: 255, 255, 255;
+    --ion-color-primary-shade: #c19831;
+    --ion-color-primary-tint: #fff7d7;
+  }
+
+.item-has-focus .label-stacked.sc-ion-label-md-h:not(.ion-color)
+{
+    color: #f1ba32;
+}
+
+.alert-radio-inner.sc-ion-alert-md {
+    background-color: #f1ba32;
+}
+
+[aria-checked="true"].sc-ion-alert-md .alert-radio-icon.sc-ion-alert-md {
+    border-color: #f1ba32;
+}
+
+ion-select {
+    --placeholeder-color: dark;
+    --placeholder-opacity: 0.50;
+}
+
+.alert-head.sc-ion-alert-md {
+    padding-bottom: 0px;
+}
+
+.match-alert .alert-head > h2:last-child{
+    opacity: .75;
+    margin-top: 10px;
+}
+
+.regi-alert .alert-wrapper .alert-message {
+    padding-top: 20px !important;
+    padding-bottom: 0;
+}

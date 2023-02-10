@@ -1,0 +1,102 @@
+<ion-header>
+  <ion-toolbar class="regiheader">
+    <ion-buttons slot="start">
+      <ion-button class="regicancel" (click)="cancel()">Cancel</ion-button>
+    </ion-buttons>
+    <ion-title class="regiheader">Register</ion-title>
+    <ion-buttons slot="end">
+      <ion-button class="regiconfirm" (click)="confirm()">Confirm</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-list class="regilist">
+    <ion-item id="rusername" counter="true">
+      <ion-label position="stacked">Username</ion-label>
+      <ion-input maxlength="20" [(ngModel)]="username" placeholder="Enter desired username"></ion-input>
+      <ion-note slot="error">Invalid or taken username</ion-note>
+    </ion-item>
+    <ion-item id="rpassword" counter="true">
+      <ion-label position="stacked">Password</ion-label>
+      <ion-input type="password" maxlength="20" [(ngModel)]="password" [clearOnEdit]="false" placeholder="Enter desired password"></ion-input>
+      <ion-note slot="error">Must be at least 8 characters long and contain big/small letters, numbers & signs</ion-note>
+    </ion-item>
+    <ion-item id="name" counter="true">
+      <ion-label position="stacked">Your name</ion-label>
+      <ion-input maxlength="15" [(ngModel)]="name" placeholder="Your name"></ion-input>
+      <ion-note slot="error">Invalid name</ion-note>
+    </ion-item>
+    <ion-item class="regimorebot datepicker" lines="full" button id="open-datemodal">
+      <ion-label position="stacked">Date of Birth</ion-label>
+      <div class="calendercontainer">
+        <ion-input [readonly]="true">{{this.date}}</ion-input>
+        <ion-icon class="calendericon" name="calendar-outline"></ion-icon>
+      </div>
+    </ion-item>
+    <ion-modal trigger="open-datemodal" [cssClass]="'bottom-end'">
+      <ng-template>
+        <ion-datetime color="secondary" value="{{this.maxdate}}" min="{{this.mindate}}" max="{{this.maxdate}}" presentation="date" [(ngModel)]="date" size="cover" [showDefaultButtons]="true">
+          <span slot="title">Select your birthday</span>
+        </ion-datetime>
+      </ng-template> 
+    </ion-modal>
+    <ion-item class="regimorebot" id="gender">
+      <ion-label position="stacked">Gender</ion-label>
+      <ion-select [(ngModel)]="gender" placeholder="Select gender">
+        <ion-select-option value="male">male</ion-select-option>
+        <ion-select-option value="female">female</ion-select-option>
+        <ion-select-option value="diverse">diverse</ion-select-option>
+      </ion-select>
+      <ion-note slot="error">Invalid gender</ion-note>
+    </ion-item>
+    <ion-item class="regimorebot" id="grade">
+      <ion-label position="stacked">Grade</ion-label>
+      <ion-select [(ngModel)]="grade" placeholder="Select grade">
+        <ion-select-option value="tutor">tutor</ion-select-option>
+        <ion-select-option value="student">student</ion-select-option>
+      </ion-select>
+      <ion-note slot="error">Invalid grade</ion-note>
+    </ion-item>
+    <ion-item id="location" counter="true">
+      <ion-label position="stacked">Location</ion-label>
+      <ion-input [(ngModel)]="location" placeholder="Write your location" maxlength="15"></ion-input>
+      <ion-note slot="error">Invalid location</ion-note>
+    </ion-item>
+    <ion-item class="regimorebot" id="subjects">
+      <ion-label position="stacked">Subjects</ion-label>
+      <ion-select [(ngModel)]="subjects" placeholder="Select subjects" [multiple]="true">
+        <ion-select-option value="Physics">Physics</ion-select-option>
+        <ion-select-option value="Math">Math</ion-select-option>
+        <ion-select-option value="Informatics">Informatics</ion-select-option>
+        <ion-select-option value="Chemistry">Chemistry</ion-select-option>
+        <ion-select-option value="German">German</ion-select-option>
+        <ion-select-option value="Chinese">Chinese</ion-select-option>
+        <ion-select-option value="French">French</ion-select-option>
+        <ion-select-option value="Spanish">Spanish</ion-select-option>
+        <ion-select-option value="English">English</ion-select-option>
+        <ion-select-option value="History">History</ion-select-option>
+        <ion-select-option value="Philosophy">Philosophy</ion-select-option>
+      </ion-select>
+      <ion-note slot="error">Invalid subjects</ion-note>
+    </ion-item>
+    <ion-item id="introduction" counter="true">
+      <ion-label position="stacked">Introduction</ion-label>
+      <ion-textarea [(ngModel)]="introduction" maxlength="250" placeholder="Write something about you" [autoGrow]="true">
+      </ion-textarea>
+      <ion-note slot="error">Invalid introduction</ion-note>
+    </ion-item>
+    <ion-item class="regimorebot" id="phonenumber">
+      <ion-label position="stacked">Phone number</ion-label>
+      <ion-input maxlength="15" type="tel" [(ngModel)]="phonenumber" placeholder="0123456789"></ion-input>
+      <ion-note slot="error">Invalid number</ion-note>
+    </ion-item>
+    <ion-item lines="full" id="photo">
+      <ion-label position="stacked">Profile Picture</ion-label>
+      <ion-input color="secondary" [readonly]="true" value=""><img class="previewpic" [src]="photo"></ion-input>
+      <ion-button class="picbtn" slot="end" (click)="takePicture()">
+        <ion-icon name="camera"></ion-icon>
+      </ion-button>
+      <ion-note slot="error">Invalid photo</ion-note>
+    </ion-item>
+  </ion-list>
+</ion-content>

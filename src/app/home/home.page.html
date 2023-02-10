@@ -1,20 +1,39 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<app-header></app-header>
+<ion-content class="main-content" ion-background-color="gray">
+  <div id="cardcontainer" class="cardcontainer">
+    <ion-card *ngFor="let p of persons" [id]="p.id" [style.position]="'absolute'" class="tindercard">
+      <ion-icon class="tdislike cardicon" name="heart-dislike"></ion-icon>
+      <ion-icon class="tlike cardicon" name="heart"></ion-icon>
+      <div class="cardimg-container">
+        <div class="cardimg">
+          <img [src]="p.img" class="cardimg">
+        </div>
+        <ion-card-title class="title-info">{{p.name}}
+          <ion-icon *ngIf="p.teacher; else other" class="teacher-validation" name="ribbon-outline"></ion-icon>
+          <ng-template #other><ion-icon #other class="teacher-validation student-validation" name="school-outline"></ion-icon></ng-template>
+        </ion-card-title>
+        <div class="more-info">
+          <ion-chip [disabled]="true" color="none" class="subtitle-info"> <ion-icon class="subtitle-info subtitle-icon" name="hourglass-outline"></ion-icon> <ion-label>{{p.age}} </ion-label></ion-chip>
+          <ion-chip [disabled]="true" color="none" class="subtitle-info"> <ion-icon class="subtitle-info subtitle-icon" name="transgender-outline"></ion-icon> <ion-label>{{p.gender}} </ion-label></ion-chip>
+          <ion-chip [disabled]="true" color="none" class="subtitle-info"> <ion-icon class="subtitle-info subtitle-icon" name="pin"></ion-icon> <ion-label>{{p.location}} </ion-label></ion-chip>
+        </div>
+      </div>
+      <ion-card-content class="introduction-text">{{p.introduction}}</ion-card-content>
+      <div class="chip-container">
+        <ion-chip *ngFor="let s of p.subject_list" class="subjects">
+          <ion-icon name="{{giveIcon(s)}}" class="subject-icon"></ion-icon>
+          <ion-label class="subject-title">{{s}}</ion-label>
+        </ion-chip>
+      </div>
+    </ion-card>
+  </div>
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <div class="refreshreminder">
+    <strong>Ran out of profiles?</strong>
+    <p>Try to refresh by pulling down or change your settings.</p>
   </div>
 </ion-content>
+

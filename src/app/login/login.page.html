@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="headertitle">Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="logocontainer">
+    <img class="logo" src="../../assets/images/logo.png">
+  </div>
+  <ion-list class="loginscreen loginlist">
+    <ion-item class="loginitem">
+      <ion-label class="loginscreen">Username</ion-label>
+      <ion-input [(ngModel)]="username" placeholder="Enter username" class="loginscreen"></ion-input>
+    </ion-item>
+    <ion-item id="password" class="loginitem">
+      <ion-label class="loginscreen">Password</ion-label>
+      <ion-input [(ngModel)]="password" type="password" [clearOnEdit]="false" placeholder="Enter password" class="loginscreen passwordtext"></ion-input>
+      <ion-note class="loginscreen loginnote" slot="error">This username/password combo does not exist!</ion-note>
+    </ion-item>
+  </ion-list>
+  <div class="button-div">
+    <ion-button (click)="login(this.username, this.password)" class="loginscreen loginbtn">Login</ion-button>
+    <ion-button (click)="openModal()" class="loginscreen registerbtn">Register</ion-button>
+  </div>
+</ion-content>

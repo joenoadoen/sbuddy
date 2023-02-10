@@ -1,0 +1,56 @@
+.regiheader {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.regicancel {
+    color: #f1ba32;
+}
+
+.regiconfirm {
+    color: #f1ba32;
+}
+
+.calendercontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calendericon {
+    position: absolute;
+    right: 16px;
+    bottom: 12px;
+    transform: scale(1.5);
+}
+
+.regilist > * {
+    margin-bottom: 15px;
+}
+
+.regimorebot {
+    margin-bottom: 30px !important;
+}
+
+.datepicker {
+    cursor: pointer;
+}
+
+ion-select {
+    --placeholeder-color: dark;
+}
+
+.picbtn {
+    position: absolute;
+    bottom: 3px;
+    right: 8px;
+    z-index: 3;
+}
+
+.previewpic {
+    width: 50%;
+    margin: 5% 0;
+    border-radius: 10%;
+}
